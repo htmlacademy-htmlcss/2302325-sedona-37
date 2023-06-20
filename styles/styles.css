@@ -16,34 +16,121 @@
   src: url("../fonts/ptsans-700.woff2") format("woff2");
 }
 
-body {
-  font-size: 22px;
-  line-height: 26px;
-  font-family: "PT Sans", sans-serif;
-  color: #000000;
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  width: 1200px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "PT Sans", sans-serif;
+  color: #333333;
   background-color: #f2f2f2;
 }
 
-.page-header {
-  color: #000000;
-
+.page-container {
   background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .nav-link {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  font-family: "PT Sans", sans-serif;
-  vertical-align: top;
-  text-align: left;
   color: #000000;
   text-decoration: none;
 }
 
-.main-index {
-  background-image: url("image/index-background.jpg");
+.user-link {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  text-decoration: none;
+}
+
+.welcome {
+  background-color: rgb(12, 127, 127);
+  background-image: url("../image/index-background.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
+}
+
+.button {
+  background-color: #756157;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 8px 50px 8px 50px;
+}
+
+.button-light {
+  background-color: #82b3d3;
+  border: 0;
+}
+
+/* Преимущуства */
+.page-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  vertical-align: top;
+  text-align: center;
+}
+
+.page-text {
+  font-weight: 7400;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.advantages-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.advantages-text {
+}
+
+.advantages-content {
+  box-sizing: 400 385;
+  padding: 103px 85px 103px 85px;
+  text-align: center;
 }
