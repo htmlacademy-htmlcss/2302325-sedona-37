@@ -26,19 +26,29 @@ html {
 }
 
 body {
-  margin: 0 auto;
   width: 1200px;
+  margin: 0 auto;
+
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   font-family: "PT Sans", sans-serif;
   color: #333333;
+
   background-color: #f2f2f2;
 }
 
 .page-container {
   background-color: #ffffff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  object-fit: cover;
+  object-position: center;
 }
 
 .visually-hidden {
@@ -77,60 +87,214 @@ body {
   display: inline-block;
   width: 44px;
   height: 44px;
+
   text-decoration: none;
+
+  background-repeat: no-repeat;
+}
+
+.user-link-search {
+  background-image: url("../image/icons/search.svg");
+}
+
+.user-link-favourites {
+  background-image: url("../image/icons/favourites.svg");
+}
+
+.favourites-number {
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+
+  background-color: #7db54f;
+  border-radius: 10px;
+}
+
+.button {
+  display: inline-block;
+  margin: 0;
+  padding: 8px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "PT Sans" sans-serif;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: #756157;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-light {
+  background-color: #82b3d3;
 }
 
 .welcome {
-  background-color: rgb(12, 127, 127);
+  position: relative;
+
+  padding: 60px 70px;
+
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #096375;
   background-image: url("../image/index-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.button {
-  background-color: #756157;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 8px 50px 8px 50px;
+.welcome::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 57px;
+
+  background-image: url("../image/curve.svg");
+  background-repeat: no-repeat;
 }
 
-.button-light {
-  background-color: #82b3d3;
-  border: 0;
+.welcome-image {
+  width: 458px;
+  height: 352px;
+  margin: 0 auto;
+}
+
+.welcome-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /* Преимущуства */
 .page-title {
+  margin: 0;
+
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  vertical-align: top;
   text-align: center;
+  color: #000000;
+  text-transform: uppercase;
 }
 
 .page-text {
-  font-weight: 7400;
+  margin: 0;
+
   font-size: 22px;
   line-height: 26px;
   text-align: center;
 }
 
-.advantages-title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  text-align: center;
+.advantages-item {
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-text {
+.advantages-item:nth-child(2n) {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-full {
+  color: #ffffff;
+
+  background-color: #82b3d3;
 }
 
 .advantages-content {
-  box-sizing: 400 385;
-  padding: 103px 85px 103px 85px;
+  width: 400px;
+  min-height: 385px;
+
   text-align: center;
+}
+
+.advantages-title {
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.advantages-container .advantages-title {
+  color: #ffffff;
+}
+
+.advantages-text {
+  margin: 0;
+}
+
+.advantages-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.services-item:nth-child {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.services-item:nth-child(2n) {
+  background-color: #ffffff;
+}
+
+.services-content {
+  width: 400px;
+  min-height: 385px;
+  padding-top: 183px;
+
+  text-align: center;
+
+  background-repeat: no-repeat;
+  background-position: top 80px center;
+}
+
+.services-content-home {
+  background-image: url(../image/icons/house.svg);
+}
+
+.services-content-food {
+  background-image: url(../image/icons/burger.svg);
+}
+
+.services-content-souvenirs {
+  background-image: url(../image/icons/present.svg);
+}
+
+.search {
+  padding: 50px 70px;
+
+  text-align: center;
+}
+
+.search-button {
+  width: 376px;
+
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.subscribe {
+  padding: 50px 70px;
+}
+
+.subscribe-home {
+  color: #ffffff;
+
+  background-color: #096375;
+  background-image: url("../image/background-mailing.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscribe-home .subscribe-title {
+  color: #ffffff;
 }
