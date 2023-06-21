@@ -393,3 +393,148 @@ img {
   font-size: 18px;
   line-height: 23px;
 }
+
+.sorting-title {
+  text-align: left;
+}
+
+.sorting-select {
+  width: 292px;
+  padding: 10px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: "PT Sans" sans-serif;
+  color: #333333;
+
+  background-color: transparent;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.view-link {
+  display: block;
+  width: 48px;
+  height: 48px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.view-link-active {
+  border-color: #000000;
+}
+
+.view-link-tile {
+  background-image: url("../image/view-icon/view-tile.svg");
+}
+
+.view-link-slideshow {
+  background-image: url("../image/view-icon/view-one.svg");
+}
+
+.view-link-list {
+  background-image: url("../image/view-icon/view-list.svg");
+}
+
+.hotels-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.hotels-title {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.hotels-text + .hotels-text {
+  text-align: right;
+}
+
+.hotels-favorites-active {
+  background-color: #7db54f;
+}
+
+.hotels-rating-star {
+  display: block;
+  height: 37px;
+
+  background-image: url("../image/stars4.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.hotels-rating-star-4 {
+  width: 90px;
+}
+
+.hotels-rating-star-3 {
+  width: 70px;
+}
+
+.hotels-rating-star-2 {
+  width: 50px;
+}
+
+.hotel-rating {
+  display: inline-block;
+  padding: 10px;
+
+  font-size: 16px;
+  line-height: 20;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+  border-radius: 4px;
+}
+
+.pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  min-height: 60px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+
+  background-color: #82b3d3;
+  border: 1px solid #82b3d3;
+  border-radius: 4px;
+}
+
+.pagination-link-current {
+  color: #000000;
+
+  background-color: #f2f2f2;
+  border-color: transparent;
+
+  pointer-events: none;
+}
+
+.pagination-link-more {
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.phone {
+  font-size: 40px;
+  line-height: 40px;
+  color: #000000;
+  text-decoration: none;
+}
