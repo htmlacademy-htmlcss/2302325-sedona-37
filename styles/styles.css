@@ -539,6 +539,11 @@ img {
   flex-wrap: wrap;
 }
 
+/*grid*/
+.hotels-item {
+  width: 340px;
+}
+
 .hotels-link {
   color: #000000;
   text-decoration: none;
@@ -586,12 +591,19 @@ img {
   padding: 10px;
 
   font-size: 16px;
-  line-height: 20;
+  line-height: 20px;
   text-align: center;
   text-transform: uppercase;
 
   background-color: #f2f2f2;
   border-radius: 4px;
+}
+
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
 }
 
 .pagination-link {
@@ -631,9 +643,24 @@ img {
   border-color: transparent;
 }
 
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 70px;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  width: 142px;
+}
+
 .phone {
+  margin: 0 auto;
+
   font-size: 40px;
   line-height: 40px;
+  text-align: center;
   color: #000000;
   text-decoration: none;
 }
