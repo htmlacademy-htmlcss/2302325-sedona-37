@@ -643,7 +643,7 @@ img {
   border-color: transparent;
 }
 
-.footer {
+.page-footer {
   display: flex;
   flex-wrap: wrap;
   padding: 30px 70px;
