@@ -116,6 +116,7 @@ img {
 .form-input {
   width: 100%;
   height: 48px;
+  padding: 15px;
 
   font-weight: 700;
   font-size: 18px;
@@ -285,11 +286,6 @@ img {
 }
 
 /* Преимущуства */
-.advantages-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .advantages-description {
   padding: 50px 70px;
 }
@@ -297,6 +293,11 @@ img {
 .advantages-description-title {
   width: 620px;
   margin: 0 auto 25px;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages-container {
@@ -312,6 +313,18 @@ img {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+.advantages-content {
+  width: 230px;
+  min-height: 160px;
+  padding: 115px 85px 100px;
+
+  text-align: center;
+}
+
+.advantages-container .advantages-content {
+  padding-top: 105px;
+}
+
 .advantages-item-full {
   width: 100%;
 
@@ -320,20 +333,8 @@ img {
   background-color: #82b3d3;
 }
 
-.advantages-container .advantages-content {
-  padding-top: 105px;
-}
-
-.advantages-content {
-  width: 400px;
-  min-height: 385px;
-  padding: 115px 85px;
-
-  text-align: center;
-}
-
 .advantages-title {
-  margin: 0 0 30px;
+  margin: 0 auto 30px;
 
   font-weight: 700;
   font-size: 24px;
@@ -393,9 +394,9 @@ img {
 }
 
 .services-content {
-  width: 400px;
-  min-height: 385px;
-  padding-top: 183px;
+  width: 230px;
+  min-height: 223px;
+  padding: 183px 85px 81px;
 
   text-align: center;
 
@@ -416,9 +417,18 @@ img {
 }
 
 .search {
-  padding: 96px 304px;
+  box-sizing: border-box;
+  padding: 96px 70px;
 
   text-align: center;
+}
+
+.search-title {
+  margin-bottom: 20px;
+}
+
+.search-text {
+  margin-bottom: 54px;
 }
 
 .search-button {
@@ -430,13 +440,7 @@ img {
 
 .subscribe {
   min-height: 414px;
-  padding: 0 268px;
-}
-
-.subscribe-form {
-  display: flex;
-  width: 684px;
-  margin: 0 auto;
+  padding: 96px 70px 104px;
 }
 
 .subscribe-home {
@@ -448,8 +452,23 @@ img {
   background-size: cover;
 }
 
+.subscribe-title {
+  margin-bottom: 20px;
+}
+
+.subscribe-text {
+  margin-bottom: 54px;
+}
+
 .subscribe-home .subscribe-title {
   color: #ffffff;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 684px;
+  margin: 0 auto;
 }
 
 .subscribe-input {
