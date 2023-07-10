@@ -29,6 +29,7 @@ html {
 
 body {
   height: 100%;
+  margin: 0;
 
   font-weight: 400;
   font-size: 18px;
@@ -40,6 +41,8 @@ body {
 }
 
 .page-container {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   width: 1200px;
@@ -106,12 +109,62 @@ img {
   cursor: pointer;
 }
 
+.button:hover {
+  background-color: #615048;
+}
+
+.button:focus {
+  background-color: #615048;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #756157;
+}
+
+.button:disabled,
+.button-disabled {
+  background-color: #e5e5e5;
+
+  pointer-events: none;
+}
+
 .button-light {
   background-color: #82b3d3;
 }
 
+.button-light:hover,
+.button-light:focus {
+  background-color: #68a2ca;
+}
+
+.button-light:active {
+  background-color: #82b3d3;
+}
+
 .button-transparent {
+  background-color: transparent;
+}
+
+.button-transparent:hover {
+  background-color: transparent;
+  opacity: 0.6;
+}
+
+.button-transparent:focus {
   background-color: rgba(255, 255, 255, 0);
+  /*box-shadow:  0 0 0 3px #82b3d3 inset; - изменяет цвет браузерного фокуса*/
+}
+
+.button-transparent:active {
+  background-color: transparent;
+}
+
+.button-transparent:disabled {
+  color: rgba(255, 255, 255, 0.1);
+
+  background-color: transparent;
 }
 
 .form-input {
@@ -165,8 +218,20 @@ img {
 }
 
 .nav-logo {
+  display: block;
+  width: 140px;
+  height: 70px;
   margin-right: 28px;
   margin-bottom: -6px;
+}
+
+.nav-logo:focus,
+.nav-logo:hover {
+  opacity: 0.6;
+}
+
+.nav-logo:active {
+  opacity: 0.3;
 }
 
 .nav-list {
@@ -179,14 +244,25 @@ img {
 }
 
 .nav-link {
+  position: relative;
+
   display: inline-block;
-  padding: 20px 0;
+  padding: 20px 0 17px;
 
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
   text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #756157;
+}
+
+.nav-link:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .nav-current {
