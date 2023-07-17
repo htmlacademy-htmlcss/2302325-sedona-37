@@ -58,7 +58,6 @@ img {
   height: auto;
 
   object-fit: cover;
-  object-position: center;
 }
 
 .visually-hidden {
@@ -97,7 +96,7 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
@@ -175,6 +174,7 @@ img {
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
+  font-family: "PT Sans", sans-serif;
   color: #000000;
 
   background-color: #f2f2f2;
@@ -182,17 +182,46 @@ img {
   border-radius: 4px;
 }
 
+.form-input[type="number"],
+.form-input[type="text"] {
+  appearance: textfield;
+}
+
+.form-input::-webkit-outer-spin-button,
+.form-input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+.form-input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+
+  opacity: 1;
+}
+
 .form-input:hover {
   background-color: #e6e6e6;
 }
 
-.form-input:focus,
-.form-input:active {
+.form-input:focus {
   background-color: #e6e6e6;
+  outline: none;
+  box-shadow: 0 0 0 3px #83b3d3;
 }
 
-.form-input::placeholder {
-  opacity: 0.6;
+.form-input-disabled,
+.form-input:disabled {
+  opacity: 0.3;
+
+  pointer-events: none;
+}
+
+.form-input-valid {
+  background-color: #ffffff;
+  border: 2px solid #7db54f;
+}
+
+.form-input-error {
+  border: 2px solid #ff5757;
 }
 
 .page-title {
@@ -230,8 +259,8 @@ img {
   display: block;
   width: 140px;
   height: 70px;
-  margin-right: 45px;
-  margin-bottom: -10px;
+  margin-right: 44px;
+  margin-bottom: -6px;
 }
 
 .nav-logo:focus,
@@ -246,16 +275,16 @@ img {
 .nav-list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 500;
+  max-width: 500px;
   margin-right: auto;
 
   gap: 32px;
 }
 
 .nav-link {
-  position: relative;
   display: inline-block;
-  padding: 20px 0 17px;
+  margin-bottom: -2px;
+  padding: 19px 0;
 
   font-weight: 700;
   font-size: 20px;
@@ -273,15 +302,14 @@ img {
   color: rgba(117, 97, 87, 0.3);
 }
 
- .nav-current::before {
-  content: "";
-  position: absolute;
-  right 0;
-  bottom: -1;
-  left: 0;
-  height: 2px;
-  background-color: #756157;
- }
+.nav-current {
+  text-decoration: 2px;
+
+  text-decoration-color: inherit;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-offset: 23px;
+}
 
 .user-list {
   display: flex;
@@ -321,8 +349,8 @@ img {
 
 .favourites-number {
   position: absolute;
-  top: 2px;
-  right: 0;
+  top: 3px;
+  right: 3px;
 
   display: inline-block;
   padding: 5px;
@@ -343,7 +371,7 @@ img {
 .welcome {
   position: relative;
 
-  padding: 51px 82px 88px;
+  padding: 50px 70px 81px;
 
   text-align: center;
   color: #ffffff;
@@ -351,7 +379,6 @@ img {
   background-color: #096375;
   background-image: url("../image/index-background.jpg");
   background-repeat: no-repeat;
-  background-position: bottom, top;
   background-size: cover;
 }
 
@@ -383,7 +410,7 @@ img {
 
 /* Преимущуства */
 .advantages-description {
-  padding: 70px 70px 88px;
+  padding: 70px 70px 90px;
 
   text-align: center;
 }
@@ -407,8 +434,16 @@ img {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-item:nth-child(2n) {
+.advantages-item:nth-child(2n):not(.advantages-item-full) {
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-full {
+  width: 100%;
+
+  color: #ffffff;
+
+  background-color: #82b3d3;
 }
 
 .advantages-content {
@@ -423,16 +458,11 @@ img {
   padding-top: 105px;
 }
 
-.advantages-item-full {
-  width: 100%;
-
-  color: #ffffff;
-
-  background-color: #82b3d3;
-}
-
 .advantages-title {
+  position: relative;
+
   margin: 0 auto 30px;
+  padding-bottom: 30px;
 
   font-weight: 700;
   font-size: 24px;
@@ -447,13 +477,15 @@ img {
 
 .advantages-title::after {
   content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
 
-  display: block;
   width: 60px;
   height: 2px;
-  margin: 30px auto 0;
 
   background-color: rgba(0, 0, 0, 0.3);
+  transform: translateX(-50%);
 }
 
 .advantages-item-full .advantages-title::after {
@@ -503,13 +535,13 @@ img {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.services-item.services-item:nth-child(even) {
+.services-item:services-item:nth-child(even) {
   background-color: #ffffff;
 }
 
 .services-content {
   min-height: 385px;
-  padding: 183px 82px 81px;
+  padding: 185px 82px 81px;
 
   text-align: center;
 
@@ -531,15 +563,15 @@ img {
 }
 
 .services-content-home {
-  background-image: url(../image/icons/house.svg);
+  background-image: url("../image/icons/house.svg");
 }
 
 .services-content-food {
-  background-image: url(../image/icons/burger.svg);
+  background-image: url("../image/icons/burger.svg");
 }
 
 .services-content-souvenirs {
-  background-image: url(../image/icons/present.svg);
+  background-image: url("../image/icons/present.svg");
 }
 
 .search {
@@ -565,8 +597,9 @@ img {
 }
 
 .subscribe {
-  min-height: 414px;
   padding: 96px 70px 104px;
+
+  text-align: center;
 }
 
 .subscribe-home {
@@ -583,7 +616,6 @@ img {
 }
 
 .subscribe-text {
-  margin: 0 auto;
   margin-bottom: 54px;
 }
 
@@ -592,15 +624,17 @@ img {
 }
 
 .subscribe-form {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  align-items: start;
   width: 684px;
   margin: 0 auto;
+
+  grid-template-columns: 1fr auto;
 }
 
 .subscribe-input {
-  width: 452px;
-  height: 52px;
+  height: 100%;
+  padding: 12px 15px;
 
   border-radius: 4px 0 0 4px;
 }
@@ -718,15 +752,16 @@ img {
 }
 
 .filter-group-range {
-  width: 288px;
+  width: 100%;
+  max-width: 288px;
   margin-left: auto;
 }
 
 .filter-group-buttons {
   display: flex;
   flex-direction: column;
-  align-self: end;
   width: 191px;
+  padding-top: 56px;
 }
 
 .filter-submit {
@@ -737,7 +772,6 @@ img {
   display: grid;
   align-items: start;
 
-  gap: 16px;
   grid-template-columns: auto 1fr;
 }
 
@@ -746,6 +780,8 @@ img {
 }
 
 .control-label {
+  padding-left: 16px;
+
   font-size: 18px;
   line-height: 23px;
 }
@@ -938,7 +974,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 47px 70px 39px;
+  padding: 50px 70px 38px;
 }
 
 .sorting-title {
@@ -949,13 +985,14 @@ img {
 
 .sorting-select {
   width: 292px;
+  height: 49px;
   margin-right: 70px;
-  padding: 14px 20px;
+  padding: 5px 40px 5px 18px;
 
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  font-family: "PT Sans" sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #333333;
 
   background-color: transparent;
@@ -990,10 +1027,11 @@ img {
 }
 
 .sorting-view {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  justify-content: end;
 
   gap: 8px;
+  grid-template-columns: repeat(3, auto);
 }
 
 .view-link {
@@ -1046,13 +1084,12 @@ img {
 
   border-bottom: 1px solid #e6e6e6;
 
-  gap: 20px;
+  gap: 18px 20px;
   grid-template-columns: repeat(3, 1fr);
 }
 
 .hotels-item {
   display: grid;
-  min-height: 438px;
   padding: 20px;
 
   border: 1px solid #e6e6e6;
@@ -1060,7 +1097,6 @@ img {
 
   gap: 16px 20px;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 212px 1fr;
 }
 
 .hotels-item p {
@@ -1089,6 +1125,7 @@ img {
 }
 
 .hotels-img {
+  height: 212px;
   margin: 0;
 
   grid-column: 1 / -1;
@@ -1153,7 +1190,7 @@ img {
 
 .hotel-rating {
   display: inline-block;
-  padding: 10px;
+  padding: 8px;
 
   font-size: 16px;
   line-height: 20px;
@@ -1167,7 +1204,7 @@ img {
 .pagination-list {
   display: flex;
   flex-wrap: wrap;
-  padding: 28px 0 60px;
+  padding: 38px 0 60px;
 
   gap: 8px;
 }
@@ -1224,7 +1261,7 @@ img {
 .page-footer {
   display: grid;
   align-items: center;
-  padding: 46px 70px 40px;
+  padding: 44px 70px 30px;
 
   grid-template-columns: auto 1fr auto;
 }
@@ -1236,7 +1273,9 @@ img {
 }
 
 .social-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 48px;
   height: 41px;
 
@@ -1305,7 +1344,6 @@ img {
 
 /*Модальное окно*/
 
-/*class="modal-container-close" закрывает модальное окно*/
 .modal-container {
   position: fixed;
   top: 0;
@@ -1320,13 +1358,11 @@ img {
 }
 
 .modal-container-close {
-  /* display: none;*/
+  display: none;
 }
 
 .modal {
   position: relative;
-  /* При стилизации лучше верхний маргин прописать в px, после вернуть как было auto */
-  /*margin: 100px auto auto;*/
 
   margin: auto;
   padding: 64px 70px;
@@ -1435,7 +1471,7 @@ img {
 .date-input {
   padding: 12px 56px 10px 18px;
 
-  background-image: url("../image/icons/icon-date.svg");
+  background-image: url("../image/icons/date.svg");
   background-repeat: no-repeat;
   background-position: right 20px center;
   background-size: 20px;
